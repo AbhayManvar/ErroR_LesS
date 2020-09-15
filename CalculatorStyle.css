@@ -1,0 +1,27 @@
+body{
+    background-color: aqua;
+}
+
+#viewOperations{
+    text-align: right;
+}
+
+#viewResult{
+    text-align: right;
+    background-color: white;
+}
+
+.op{
+    margin-left: 5%;
+    width: 90%;
+}
+
+.digit{
+    margin-left: 5%;
+    width: 90%;
+}
+
+.float{
+    margin-left: 5%;
+    width: 90%;
+}

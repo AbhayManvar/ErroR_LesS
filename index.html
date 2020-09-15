@@ -1,0 +1,66 @@
+<html>
+
+    <head>
+        <title>
+            Error_Less
+        </title>
+        <link rel="stylesheet" href="CalculatorStyle.css" >
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="Operations.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Error_Less</h1>
+        </header>
+
+        <hr>
+
+        <div>
+            <table>
+                <tr>
+                    <td colspan="4"><input type="text" id="viewOperations" pattern="([0-9]+('+'+'-'+'x'+'/'+'^')[0-9]+)+" autofocus></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><p id="viewResult"> &nbsp; </p></td>
+                </tr>
+                <tr>
+                    <td><button class="op" id="clear">C</button></td>
+                    <td><button class="op" id="<"><</button></td>
+                    <td><button class="op" id="^">^</button></td>
+                    <td><button class="op" id="/">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="digit" id="7">7</button></td>
+                    <td><button class="digit" id="8">8</button></td>
+                    <td><button class="digit" id="9">9</button></td>
+                    <td><button class="op" id="x">x</button></td>
+                </tr>
+                <tr>
+                    <td><button class="digit" id="4">4</button></td>
+                    <td><button class="digit" id="5">5</button></td>
+                    <td><button class="digit" id="6">6</button></td>
+                    <td><button class="op" id="+">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="digit" id="1">1</button></td>
+                    <td><button class="digit" id="2">2</button></td>
+                    <td><button class="digit" id="3">3</button></td>
+                    <td><button class="op" id="-">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="digit" id="0">0</button></td>
+                    <td><button class="digit" id="00">00</button></td>
+                    <td><button class="digit" id=".">.</button></td>
+                    <td><button class="op" id="result">=</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+
+        </footer>
+
+    </body>
+
+</html>
