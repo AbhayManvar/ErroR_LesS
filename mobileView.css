@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(50, 205, 109);
+}
+
+#viewOperations{
+    text-align: right;
+}
+
+#viewResult{
+    text-align: right;
+    background-color: white;
+}
+
+table{
+    width: 100%;
+    height: 90%;
+}
+
+table tr td input{
+    width: 100%;
+    height: 100%;
+    font-size: 80px;
+}
+table tr td p{
+    width: 100%;
+    height: 100%;
+    font-size: 80px;
+}
+
+.op{
+    width: 100%;
+    height: 100%;
+    font-size: 80px;
+}
+
+.digit{
+    width: 100%;
+    height: 100%;
+    font-size: 80px;
+}
+
+table tr td{
+    width: 25%;
+}
