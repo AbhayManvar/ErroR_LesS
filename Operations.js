@@ -28,7 +28,7 @@ $(function(){
             Expression[Expression.length-1] = parseFloat(Expression[Expression.length-1]);
         }
         
-        $("#viewOperations").val(Expression.join(""));
+        $("#viewOperations").html(Expression.join(""));
     });
 
 
@@ -41,6 +41,7 @@ $(function(){
             postExp = [];
             operatorStack = [];
             $("#viewResult").html("&nbsp;");
+            $("#viewOperations").html("&nbsp");
         }
 
         else if(this.id == "<"){
@@ -52,6 +53,7 @@ $(function(){
             else{
                 Expression.pop();
             }
+            $("#viewOperations").html(Expression.join(""));
         }
 
         else if(this.id == "result"){
@@ -64,11 +66,8 @@ $(function(){
 
         else{
             Expression.push(this.id);
+            $("#viewOperations").html(Expression.join(""));
         }
-
-        if(this.id != "result"){
-            $("#viewOperations").val(Expression.join("")); 
-        } 
 
     });
 });
