@@ -23,9 +23,8 @@ $(function(){
         else{
             Expression[Expression.length-1] += this.id;
         }
-
-        if(this.id != "."){
-            Expression[Expression.length-1] = parseFloat(Expression[Expression.length-1]);
+        if(Expression[Expression.length-1][0] == "."){
+            Expression[Expression.length-1] = "0" + Expression[Expression.length-1];
         }
         
         $("#viewOperations").html(Expression.join(""));
@@ -57,6 +56,7 @@ $(function(){
         }
 
         else if(this.id == "result"){
+             Expression[Expression.length-1] = Number(Expression[Expression.length-1]);
              Calculate(Expression);
              $("#viewResult").html(postExp);
              Expression = [];
@@ -65,6 +65,7 @@ $(function(){
         }
 
         else{
+            Expression[Expression.length-1] = Number(Expression[Expression.length-1]);
             Expression.push(this.id);
             $("#viewOperations").html(Expression.join(""));
         }
