@@ -56,18 +56,32 @@ $(function(){
         }
 
         else if(this.id == "result"){
-             Expression[Expression.length-1] = Number(Expression[Expression.length-1]);
-             Calculate(Expression);
-             $("#viewResult").html(postExp);
-             Expression = [];
-             Expression.push(postExp[0]);
-             postExp = [];
+             if(Expression.length >= 3){
+                if(Expression[Expression.length-1] == "+" || Expression[Expression.length-1] == "-" 
+                || Expression[Expression.length-1] == "/" || Expression[Expression.length-1] == "x" 
+                || Expression[Expression.length-1] == "^"){
+                    Expression.pop();
+                    $("#viewOperations").html(Expression.join(""));
+                }else{
+                    Expression[Expression.length-1] = Number(Expression[Expression.length-1]);
+                }
+                Calculate(Expression);
+                $("#viewResult").html(postExp);
+                Expression = [];
+                Expression.push(postExp[0]);
+                postExp = [];
+             }
         }
 
         else{
-            Expression[Expression.length-1] = Number(Expression[Expression.length-1]);
-            Expression.push(this.id);
-            $("#viewOperations").html(Expression.join(""));
+            if(Expression.length != 0 && Expression[Expression.length-1] != "+"
+            && Expression[Expression.length-1] != "-" && Expression[Expression.length-1] != "/"
+            && Expression[Expression.length-1] != "x" && Expression[Expression.length-1] != "^"){
+                Expression[Expression.length-1] = Number(Expression[Expression.length-1]);
+                Expression.push(this.id);
+                $("#viewOperations").html(Expression.join(""));
+            }
+            
         }
 
     });
