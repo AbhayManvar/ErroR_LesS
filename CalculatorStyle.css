@@ -12,7 +12,11 @@ div{
     padding-right: 25%;
 }
 
-table{
+table tr td{
+    width: 25%;
+}
+
+#mainFrame{
     width: 100%;
     border-style: solid;
     border-width: 5px;
@@ -21,19 +25,37 @@ table{
     border-radius: 3%;
 }
 
-table tr td p{
+#displayBox{    
+    background-color: white;
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 5px 5px 5px 5px;
+    border-radius: 2%;
+}
+
+#displayBox:hover{
+    border-color: rgb(110, 110, 110);
+}
+
+#displayBox tr td p{
     width: 98%;
     height: 100%;
-    font-size: 50px;
     text-align: right;
     background-color: white;
     padding-left: 1%;
     padding-right: 1%;
 }
 
-table tr td{
-    width: 25%;
+#viewOperations{
+    font-size: 40px;
 }
+
+#viewResult{
+    font-size: 50px;
+}
+
 
 .op{
     width: 100%;
@@ -59,19 +81,12 @@ table tr td{
     padding-bottom: 13px;
 }
 
-#viewOperations{
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-
-#viewResult{
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    margin-bottom: 3px;
-}
-
 button{
     border-radius: 3px;
+}
+
+button:hover{
+    color: turquoise;
 }
 
 #result{
